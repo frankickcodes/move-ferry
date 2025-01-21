@@ -140,3 +140,114 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Responsive design for tablets and phones */
+@media (max-width: 1024px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav h1 {
+        font-size: 26px;
+    }
+
+    ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    li {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    header img {
+        width: 10em;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    footer {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+/* More responsive design for smaller devices (phones) */
+@media (max-width: 768px) {
+    /* Initially hide the menu on small screens */
+ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-right: 15px;
+}
+
+.menu-toggle {
+    display: block;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+ul.active {
+    display: flex; /* Show the menu when 'active' class is added */
+    flex-direction: column;
+    margin-top: 10px;
+}
+    nav {
+        padding: 10px;
+    }
+
+    nav h1 {
+        font-size: 22px;
+    }
+
+    ul {
+        flex-direction: column;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    li {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+
+    header img {
+        width: 8em;
+    }
+
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    footer {
+        position: static;
+        padding: 10px;
+    }
+}

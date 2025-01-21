@@ -47,7 +47,13 @@ ul {
     list-style: none;
     padding: 0;
     margin-right: 15px;
+    transition: max-height 0.3s ease-in-out;
 }
+ul.active {
+    display: block;
+    max-height: 500px; 
+}
+
 
 ul a {
     text-decoration: none;
@@ -124,7 +130,9 @@ footer h3 {
         flex-direction: column;
         text-align: center;
     }
-
+     body{
+        background-color: black;
+     }
     nav h1 {
         font-size: 24px;
     }
@@ -162,4 +170,24 @@ footer h3 {
     }
 }
 
+@media (max-width: 768px) {
+    ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    li{
+        color: white;
+    }
+    ul.active {
+        display: block;
+    }
 
+    nav {
+        position: relative;
+    }
+
+    nav button {
+        display: block;
+    }
+}

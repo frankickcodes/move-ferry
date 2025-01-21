@@ -10,16 +10,16 @@
 <body>
     <nav>
         <h1> Move<span>Ferry.</span></h1>
-        
-         <ul>
-             <a href="index.html"><li>Home </li></a>
-           <a href="about.html">   <li>About</li></a>
-           <a href="">  <li>Rate Calculators</li></a>
-           <a href="">  <li>Price list</li></a>
-           <a href="contact.html">  <li>Contact us</li></a>
-           
-         </ul>
-     </nav>
+        <!-- Button to toggle menu on smaller screens -->
+        <button class="menu-toggle">☰</button>
+        <ul>
+            <a href="index.html"><li>Home </li></a>
+            <a href="about.html"> <li>About</li></a>
+            <a href="">  <li>Rate Calculators</li></a>
+            <a href="">  <li>Price list</li></a>
+            <a href="contact.html">  <li>Contact us</li></a>
+        </ul>
+    </nav>
     <header>
         <h1>Contact Us</h1>
     </header>
@@ -64,5 +64,13 @@
     <footer>
         &copy; 2025 MoveFerry. All rights reserved.
     </footer>
+    <script>
+        const menuButton = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('ul');
+
+menuButton.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+    </script>
 </body>
 </html>

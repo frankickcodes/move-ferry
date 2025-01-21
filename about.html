@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - MoveFerry</title>
     <link rel="stylesheet" href="about.css">
-    <link rel="icon" href="moveferry-logo.jpg" type="">
-    
+    <link rel="icon" href="moveferry-logo.jpg" type="image/jpeg">
 </head>
 <body>
-    
+
     <header>
         <nav>
             <h1> Move<span>Ferry.</span></h1>
+
+            <!-- Mobile menu toggle button -->
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button>
             
-             <ul>
-                 <a href="index.html"><li>Home </li></a>
-               <a href="about.html">   <li>About</li></a>
-               <a href="">  <li>Rate Calculators</li></a>
-               <a href="">  <li>Price list</li></a>
-               <a href="contact.html">  <li>Contact us</li></a>
-               
-             </ul>
-         </nav>
+            <ul class="nav-links">
+                <a href="index.html"><li>Home</li></a>
+                <a href="about.html"><li>About</li></a>
+                <a href=""><li>Rate Calculators</li></a>
+                <a href=""><li>Price list</li></a>
+                <a href="contact.html"><li>Contact us</li></a>
+            </ul>
+        </nav>
         <img src="moveferry-logo.jpg" alt="MoveFerry Logo">
         <h1>MoveFerry</h1>
-        
     </header>
 
     <div class="container">
@@ -47,16 +47,17 @@
             </div>
             <div class="card">
                 <img src="printer.png" alt="Smart Lable">
-                <h3>smart lable</h3>
+                <h3>Smart Label</h3>
                 <p>You can generate your shipping labels for multiple shipments with your brand name in a professional format.</p>
             </div>
             <div class="card">
                 <img src="support.png" alt="Best Support">
                 <h3>Best Support</h3>
-                <p>We are committed to providing best customer care for shipping-related, tech related and other problems.</p>
+                <p>We are committed to providing best customer care for shipping-related, tech related, and other problems.</p>
             </div>
         </div>
     </div>
+
     <div class="carousel">
         <h1>Our Delivery Partners</h1>
         <div class="carousel-track">
@@ -67,39 +68,36 @@
             <img src="amazon-logo.webp" alt="Amazon">
         </div>
     </div>
-    .
+
     <h2>Company Facts</h2>
-        <div class="facts">
-            <div class="fact-card">
-                <h3>Happy Customers</h3>
-                <p>50</p>
-            </div>
-            <div class="fact-card">
-                <h3>Orders Delivered</h3>
-                <p>5000</p>
-            </div>
-            <div class="fact-card">
-                <h3>Our Experts</h3>
-                <p>20</p>
-            </div>
+    <div class="facts">
+        <div class="fact-card">
+            <h3>Happy Customers</h3>
+            <p>50</p>
+        </div>
+        <div class="fact-card">
+            <h3>Orders Delivered</h3>
+            <p>5000</p>
+        </div>
+        <div class="fact-card">
+            <h3>Our Experts</h3>
+            <p>20</p>
         </div>
     </div>
-
 
     <footer>
         &copy; 2025 MoveFerry. All rights reserved.
     </footer>
 
     <script>
-        const track = document.querySelector('.carousel-track');
-        let position = 0;
-        setInterval(() => {
-            position -= 160; // Adjust this value based on image width + margin
-            if (Math.abs(position) >= track.scrollWidth / 2) {
-                position = 0;
-            }
-            track.style.transform = `translateX(${position}px)`;
-        }, 2000);
+        // Mobile menu toggle functionality
+        const menuButton = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle the 'active' class on the <ul> for mobile navigation
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
