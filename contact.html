@@ -5,72 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - MoveFerry</title>
     <link rel="stylesheet" href="contact.css">
-
+    <script defer src="script.js"></script>
+    <style>
+       
+    </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
     <nav>
-        <h1> Move<span>Ferry.</span></h1>
-        <!-- Button to toggle menu on smaller screens -->
-        <button class="menu-toggle">☰</button>
-        <ul>
-            <a href="index.html"><li>Home </li></a>
-            <a href="about.html"> <li>About</li></a>
-            <a href="">  <li>Rate Calculators</li></a>
-            <a href="">  <li>Price list</li></a>
-            <a href="contact.html">  <li>Contact us</li></a>
+        <h1>Move<span>Ferry</span></h1>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="rate-calculator.html">Rate Calculators</a></li>
+            <li><a href="price-list.html">Price List</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
+        <button class="menu-toggle"></button>
     </nav>
+
+    <!-- Contact Section -->
     <header>
         <h1>Contact Us</h1>
     </header>
 
-    <div class="container">
-        <h2>Get in Touch</h2>
+    <main>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <p><strong>Founder:</strong> Rishi Kartik Raja</p>
+                <p><strong>Co-Founder:</strong> Sourabh Joshi</p>
+                <p><strong>Second Co-Founder:</strong> Chandan Kumar</p>
 
-        <div class="contact-details">
-            <p><strong>Founder:</strong> Rishi Kartik Raja</p>
-            <p><strong>Co-Founder:</strong> Sourabh Joshi</p>
-            <p><strong>Co-Founder:</strong> Chandan Kumar</p>
+                <p><strong>Contact Numbers:</strong></p>
+                <p>96670 96090, 78382 38032, 92118 06090</p>
 
-            <p><strong>Contact Numbers:</strong></p>
-            <p>96670 96090, 78382 38032, 92118 06090</p>
+                <p><strong>Email:</strong> <a href="mailto:moveferry18@gmail.com">moveferry18@gmail.com</a></p>
+            </div>
 
-            <p><strong>Email:</strong> <a href="mailto:moveferry18@gmail.com">moveferry18@gmail.com</a></p>
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+                <form action="https://formsubmit.co/moveferry18@gmail.com" method="POST">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="Your First Name" required>
+
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Your Last Name" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                    <label for="comment">Comment</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Your Comment" required></textarea>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
+    </main>
 
-        <div class="contact-form">
-            <h2>Contact Form</h2>
-            <form action="https://formsubmit.co/moveferry18@gmail.com" method="POST">
-                <label for="first-name">First Name</label>
-                <input type="text" id="first-name" name="first_name" placeholder="Your First Name" required>
-
-                <label for="last-name">Last Name</label>
-                <input type="text" id="last-name" name="last_name" placeholder="Your Last Name" required>
-
-                <label for="contact-number">Contact Number</label>
-                <input type="tel" id="contact-number" name="contact_number" placeholder="Your Contact Number" required>
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-                <label for="comment">Comment</label>
-                <textarea id="comment" name="comment" rows="4" placeholder="Your Comment" required></textarea>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-
+    <!-- Footer -->
     <footer>
         &copy; 2025 MoveFerry. All rights reserved.
     </footer>
     <script>
-        const menuButton = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('ul');
+        document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-menuButton.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 });
+
     </script>
 </body>
 </html>

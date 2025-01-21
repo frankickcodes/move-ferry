@@ -125,14 +125,17 @@ footer h3 {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+/* Responsive design for portrait orientation (phones and tablets) */
+@media screen and (max-width: 768px) and (orientation: portrait) {
     nav {
         flex-direction: column;
         text-align: center;
     }
-     body{
+
+    body {
         background-color: black;
-     }
+    }
+
     nav h1 {
         font-size: 24px;
     }
@@ -140,11 +143,19 @@ footer h3 {
     ul {
         flex-direction: column;
         margin-top: 10px;
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    ul.active {
+        display: block;
     }
 
     li {
         font-size: 18px;
         margin: 5px 0;
+        color: white;
     }
 
     .body-box {
@@ -170,24 +181,44 @@ footer h3 {
     }
 }
 
-@media (max-width: 768px) {
+/* Additional rule to prevent styling on landscape orientations */
+@media screen and (min-width: 769px) or (orientation: landscape) {
+    ul {
+        display: flex !important; /* Force display to flex for larger or landscape devices */
+    }
+
+    body {
+        background-color: initial;
+    }
+
+    li {
+        color: initial;
+    }
+}
+/* Responsive design for portrait orientation (phones and tablets) */
+@media screen and (max-width: 768px) and (orientation: portrait) {
+    nav button {
+        display: block; /* Show the hamburger menu in portrait mode */
+    }
+
     ul {
         display: none;
         width: 100%;
         text-align: center;
     }
-    li{
-        color: white;
-    }
+
     ul.active {
         display: block;
     }
+}
 
-    nav {
-        position: relative;
+/* Hide hamburger menu button in landscape orientation */
+@media screen and (orientation: landscape) {
+    nav button {
+        display: none; /* Hide the hamburger menu in landscape mode */
     }
 
-    nav button {
-        display: block;
+    ul {
+        display: flex !important; /* Ensure the navigation menu is visible in landscape mode */
     }
 }
